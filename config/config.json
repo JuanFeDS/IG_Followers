@@ -1,0 +1,16 @@
+{
+    "paths": {
+        "data": "./data/"
+    },
+    
+    "categories": {
+        "followers": {
+            "name": "followers",
+            "path": "connections/followers_and_following/followers_1.html"
+        },
+        "following": {
+            "name": "following",
+            "path": "connections/followers_and_following/following.html"
+        }
+    }
+}
