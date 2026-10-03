@@ -27,4 +27,7 @@ def unfollowers(
     df_unfollowers = df_unfollowers[['following_username', 'following_url']]
     df_unfollowers.reset_index(drop=True, inplace=True)
 
+    df_excluded = pd.read_csv('./data/clean/Exclusions.csv')
+    df_unfollowers = df_unfollowers[~df_unfollowers['following_username'].isin(df_excluded['following_username'])]
+
     return df_unfollowers
